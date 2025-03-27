@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Workout Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <h2>Workout Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+    
+    <h3>Create Workout</h3>
+    <form id="workoutForm">
+        <input type="text" id="workoutId" placeholder="Workout ID" required>
+        <input type="text" id="exerciseName" placeholder="Exercise Name" required>
+
+        <input type="number" id="sets" placeholder="Sets" required>
+        <input type="number" id="reps" placeholder="Reps" required>
+        <input type="number" id="weight" placeholder="Weight (optional)">
+        <button type="submit">Add Workout</button>
+    </form>
+    
+    <h3>Update Workout</h3>
+    <form id="updateWorkoutForm">
+        <input type="text" id="updateWorkoutId" placeholder="Workout ID" required>
+        <input type="text" id="updateExerciseName" placeholder="Exercise Name" required>
+        <input type="number" id="updateSets" placeholder="Sets" required>
+        <input type="number" id="updateReps" placeholder="Reps" required>
+        <input type="number" id="updateWeight" placeholder="Weight (optional)">
+        <button type="submit">Update Workout</button>
+    </form>
+    
+    <h3>Delete Workout</h3>
+    <form id="deleteWorkoutForm">
+        <input type="text" id="deleteWorkoutId" placeholder="Workout ID" required>
+        <button type="submit">Delete Workout</button>
+    </form>
+    
+    <h3>Schedule Workout</h3>
+    <form id="scheduleWorkoutForm">
+        <input type="text" id="scheduleWorkoutId" placeholder="Workout ID" required>
+        <input type="datetime-local" id="scheduleDateTime" required>
+        <button type="submit">Schedule Workout</button>
+    </form>
+
+
+    <h3>Your Workouts</h3>
+    <ul id="workoutList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

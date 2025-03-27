@@ -1,0 +1,50 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    background: #f5f7fa;
+}
+
+/* Navbar */
+.navbar {
+    background: #1E90FF;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.primary-btn { background: #1E90FF; color: white; }
+.secondary-btn { background: gray; color: white; }
+.btn:hover { opacity: 0.8; }
+
+/* Forms */
+.form-container {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

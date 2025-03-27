@@ -1,13 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+        }
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a, .btn {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn {
+            background-color: #ff6600;
+        }
+        .btn:hover {
+            background-color: #ff4500;
+        }
+        .hero {
+            background: url('img/workout.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero-content p {
+            font-size: 18px;
+        }
+        .info {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .footer-content {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Workout Tracker</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn">Login</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </div>
+    </nav>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Workout Tracker</h1>
+            <p>Track your progress, stay fit, and achieve your fitness goals.</p>
+        </div>
+    </header>
+    
+    <section class="info">
+        <h2>Why Choose Us?</h2>
+        <p>Our platform helps you track your workouts, set goals, and stay motivated. Join us today and take the first step toward a healthier life!</p>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Workout Tracker. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
