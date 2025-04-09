@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Workout Tracker</title>
+    <title>Log Workout - Workout Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="dashboard-body">
     <!-- Sidebar Navigation -->
@@ -16,8 +15,8 @@
             <h3>Workout Tracker</h3>
         </div>
         <ul class="sidebar-menu">
-            <li class="active"><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
-            <li><a href="workout-log.html"><i class="fas fa-dumbbell"></i> Log Workout</a></li>
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active"><a href="workout-log.html"><i class="fas fa-dumbbell"></i> Log Workout</a></li>
             <li><a href="workout-history.html"><i class="fas fa-history"></i> History</a></li>
             <li><a href="performance.html"><i class="fas fa-chart-line"></i> Performance</a></li>
             <li><a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a></li>
@@ -28,64 +27,13 @@
     <!-- Main Content -->
     <main class="main-content">
         <header class="dashboard-header">
-            <h1>Welcome back, <span id="userName">User</span>!</h1>
-            <div class="header-actions">
-                <button class="btn-notification"><i class="fas fa-bell"></i></button>
-                <button class="btn-profile"><img id="userAvatar" src="img/workout.jpg" alt="Profile"></button>
-            </div>
+            <h1>Log New Workout</h1>
         </header>
 
-        <!-- Quick Stats Section -->
-        <section class="quick-stats">
-            <div class="stat-card">
-                <i class="fas fa-fire"></i>
-                <h3>Total Workouts</h3>
-                <p id="totalWorkouts">0</p>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-trophy"></i>
-                <h3>Personal Bests</h3>
-                <p id="personalBests">0</p>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-weight-hanging"></i>
-                <h3>Total Volume</h3>
-                <p id="totalVolume">0 kg</p>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-clock"></i>
-                <h3>Workout Time</h3>
-                <p id="totalTime">0 hrs</p>
-            </div>
-        </section>
-
-        <!-- Progress Charts -->
-        <section class="charts-section">
-            <div class="chart-card">
-                <h3>Weekly Progress</h3>
-                <canvas id="weeklyProgressChart"></canvas>
-            </div>
-            <div class="chart-card">
-                <h3>Muscle Group Focus</h3>
-                <canvas id="muscleGroupChart"></canvas>
-            </div>
-        </section>
-
-        <!-- Recent Workouts -->
-        <section class="recent-workouts">
-            <div class="section-header">
-                <h2>Recent Workouts</h2>
-                <button class="btn-primary" onclick="window.location.href='workout-log.html'">Log New Workout</button>
-            </div>
-            <div class="workout-list" id="recentWorkoutsList">
-                <!-- Workout items will be populated by JavaScript -->
-            </div>
-        </section>
-
-        <!-- Quick Add Workout -->
+        <!-- Log Workout Form -->
         <section class="quick-add">
-            <h2>Quick Add Workout</h2>
-            <form id="quickWorkoutForm" class="quick-workout-form">
+            <h2>Log Your Workout</h2>
+            <form id="logWorkoutForm" class="quick-workout-form">
                 <div class="form-group">
                     <select id="exerciseType" required>
                         <option value="">Select Exercise Type</option>

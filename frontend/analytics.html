@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Workout Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="img/workout.jpg" alt="Logo" class="logo">
+            <h3>Workout Tracker</h3>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="workout-log.html"><i class="fas fa-dumbbell"></i> Log Workout</a></li>
+            <li><a href="workout-history.html"><i class="fas fa-history"></i> History</a></li>
+            <li><a href="performance.html"><i class="fas fa-chart-line"></i> Performance</a></li>
+            <li class="active"><a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Analytics</h1>
+        </header>
+
+        <!-- Analytics Section -->
+        <section class="charts-section">
+            <div class="chart-card">
+                <h3>Trend Analysis</h3>
+                <canvas id="trendAnalysisChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Most Recent Performance</h3>
+                <canvas id="recentPerformanceChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

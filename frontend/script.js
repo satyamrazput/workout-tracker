@@ -1,4 +1,7 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "http://localhost:5000/api"; // Ensure API_URL is defined
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Move emailPattern to a higher scope
+
+// 🟢 Sign Up
 
 // 🟢 Sign Up
 document.getElementById("signupForm")?.addEventListener("submit", async (e) => {
@@ -6,6 +9,19 @@ document.getElementById("signupForm")?.addEventListener("submit", async (e) => {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Validate password strength
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return;
+    }
 
     const res = await fetch(`${API_URL}/auth/signup`, {
         method: "POST",
@@ -28,6 +44,13 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    // Validate email format
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    console.log("Login form submitted"); // Debugging line
     const res = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -35,14 +58,18 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
     });
 
     const data = await res.json();
+    console.log("Login response:", data); // Debugging line
     if (res.ok) {
         localStorage.setItem("token", data.token);
-        window.location.href = "dashboard.html";
-    } else {
+        window.location.href = "dashboard.html"; // ✅ Redirect to dashboard
+    }
+      else {
         const errorData = await res.json();
         alert(`Login failed: ${errorData.message}`);
     }
 });
+
+// The rest of the code remains unchanged...
 
 // 🟢 Fetch Workouts
 async function fetchWorkouts() {
